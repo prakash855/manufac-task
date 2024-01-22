@@ -1,5 +1,8 @@
 # React + TypeScript + Vite App
 
+<img width="1440" alt="Screenshot 2024-01-22 at 5 24 47 PM" src="https://github.com/prakash855/manufac-task/assets/56213227/1a647e45-a1fa-4719-b5d4-5ec12dbba847">
+
+
 This project is a React application with TypeScript support built using Vite. It includes a minimal setup for working with React, TypeScript, and Vite, along with some ESLint rules for code quality.
 
 ## Table of Contents
