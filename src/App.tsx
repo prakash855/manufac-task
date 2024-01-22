@@ -1,38 +1,27 @@
-// App.tsx
-import React from 'react';
-import DataTable from './components/DataTables';
+import { FC } from "react";
 import "./App.css";
+import { dataTables } from "./constants";
+import DataTable from "./components/DataTables";
 
-import {
-  alcoholClasses,
-  flavanoidsByAlcoholClass,
-  gammaTypeOfAlcohol,
-  calculateMean,
-  calculateMedian,
-  calculateMode,
-} from "./utility";
-
-const App: React.FC = () => {
-  return (
-    <div className="tables">
-      <DataTable
-        title="Flavanoids"
-        classes={alcoholClasses}
-        data={flavanoidsByAlcoholClass}
-        calculateMean={calculateMean}
-        calculateMedian={calculateMedian}
-        calculateMode={calculateMode}
-      />
-      <DataTable
-        title="Gamma"
-        classes={alcoholClasses}
-        data={gammaTypeOfAlcohol}
-        calculateMean={calculateMean}
-        calculateMedian={calculateMedian}
-        calculateMode={calculateMode}
-      />
-    </div>
-  );
-};
+const App: FC = () => (
+  <div className="tables">
+    {dataTables.map(
+      (
+        { title, classes, data, calculateMean, calculateMedian, calculateMode },
+        index
+      ) => (
+        <DataTable
+          key={index}
+          title={title}
+          classes={classes}
+          data={data}
+          calculateMean={calculateMean}
+          calculateMedian={calculateMedian}
+          calculateMode={calculateMode}
+        />
+      )
+    )}
+  </div>
+);
 
 export default App;
