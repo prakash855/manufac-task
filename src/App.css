@@ -15,14 +15,14 @@ code {
 th,
 td {
   text-align: left;
-  color: teal;
+  color: peru;
   padding: 1rem;
-  border: 1px solid teal;
+  border: 1px solid peru;
   font-weight: 500;
 }
 
 th {
-  background-color: teal;
+  background-color: peru;
   color: white;
 }
 
